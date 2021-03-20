@@ -31,7 +31,7 @@ const Header = () => {
           <Hako2 />
         </Grid>
         <Grid item xs={3} sm={3}>
-          <Hako3 message="箱３" />
+          <Hako3 />
         </Grid>
       </Grid>
     </Toolbar>
