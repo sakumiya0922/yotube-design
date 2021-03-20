@@ -1,15 +1,13 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 interface Hako3Props {
-  message:string,
+  message: string,
 }
 
-const Hako3:React.FC<Hako3Props> = (props) => {
-  const {message} = props
-  return(
-    <div>
-      <p>{message}</p>
-    </div>
+const Hako3: React.FC<Hako3Props> = (props) => {
+  const { message } = props
+  return (
+    <div style={{ backgroundColor: "blue", width: "100%", height: "100%" }} />
   )
 }
 

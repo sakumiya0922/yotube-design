@@ -1,13 +1,37 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import MenuIcon from '@material-ui/icons/Menu';
+import { makeStyles, Theme, createStyles, Grid } from '@material-ui/core';
+import YouTubeIcon from '@material-ui/icons/YouTube';
 
-interface Hako1Props {
-  message:string,
-}
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    menuIcon: {
+      height: 40,
+      width: 40,
+      marginRight: 16
+    },
+    youtubeIcon: {
+      color: "red",
+      height: 40,
+      width: 40
+    },
+    youtubeFont: {
+      fontWeight: 700,
+      fontSize: 15,
+      transform: "scale(1, 1.5)"
+    }
+  })
+)
 
-const Hako1:React.FC<Hako1Props> = (props) => {
-  const {message} = props
-  return(
-    <div style={{backgroundColor:"green",width:"100"}}>
+const Hako1: React.FC = () => {
+  const classes = useStyles()
+  return (
+    <div>
+      <Grid container item direction="row" alignItems="center">
+        <MenuIcon className={classes.menuIcon} />
+        <YouTubeIcon className={classes.youtubeIcon} />
+        <p className={classes.youtubeFont}>YouTube</p>
+      </Grid>
     </div>
   )
 }
